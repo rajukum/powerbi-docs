@@ -272,9 +272,11 @@ Once you've created your virtual machine, called **myVM**, connected to it from 
 
 The next step is to access Power BI privately, from the virtual machine you created in the previous step, using the following steps: 
 
-1. In the Remote Desktop of myVM, open PowerShell.
-2. Enter nslookup 52d40f65ad6d48c3906f1ccf598612d4-api.privatelink.analysis.windows.net.
-3. You'll receive a message similar to this:
+1. From Azure portal, click on Private Endpoint created above(myPrivateEndpoint). 
+2. From the left navigation select **DNS Configuration**, note down FQDN for api.analysis.windows.net. In my case it is 52d40f65ad6d48c3906f1ccf598612d4-api.privatelink.analysis.windows.net.
+3. In the Remote Desktop of myVM, open PowerShell.
+4. Enter nslookup 52d40f65ad6d48c3906f1ccf598612d4-api.privatelink.analysis.windows.net.
+5. You'll receive a message similar to this:
 
     ```
     Server:  UnKnown
